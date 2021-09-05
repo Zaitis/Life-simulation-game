@@ -25,10 +25,10 @@ public class Character extends JPanel {
     Character(String name, int life, int energy, int strength, int knowledge, int money, int hungry){
          this.name= name;
          this.energy= energy;
-         this.strength= strength;
-         this.knowledge= knowledge;
-         this.money= money;
-         this.hungry= hungry;
+         Character.strength = strength;
+         Character.knowledge = knowledge;
+         Character.money = money;
+         Character.hungry = hungry;
 
          this.setLayout(null);
          this.setBounds(PANEL_POSITIONX,PANEL_POSITIONY,WIDTH_PANEL,HEIGHT_PANEL);

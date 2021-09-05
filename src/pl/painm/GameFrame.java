@@ -10,11 +10,11 @@ public class GameFrame extends JFrame {
             private final int FRAME_HEIGHT=800;
             static Map<Integer, ShopProducts> products;
             static ImgPanel imgpanel;
-            static Character karinka =new Character("Marian",100,100,5,5,1000,100);
+            static Character character =new Character("Marian",100,100,5,5,1000,100);
 
     GameFrame(){
 
-        //add products to static HashMap by using on Shop, Home->Eat
+        //add products to static HashMap for using on Shop, Home->Eat
         products = new HashMap<>();
         products.put(0,new ShopProducts("Jogurt",5,5));
         products.put(1,new ShopProducts("Ciasteczka",5,5));
@@ -31,7 +31,7 @@ public class GameFrame extends JFrame {
         this.setTitle("Life Simulation");
         this.setLayout(null);
 
-        this.add(karinka);
+        this.add(character);
         this.add(new Place());
         imgpanel= new ImgPanel();
         this.add(imgpanel);

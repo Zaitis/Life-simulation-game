@@ -17,7 +17,7 @@ public class Home extends JFrame implements ActionListener {
     Home() {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setBounds(320,100,FRAME_WIDTH, FRAME_HEIGHT);
-        this.setBackground(new Color(255, 255, 0));
+       // this.setBackground(new Color(255, 255, 0));
         this.setTitle("Twój dom");
         this.setLayout(null);
         this.setVisible(true);
@@ -28,7 +28,7 @@ public class Home extends JFrame implements ActionListener {
         productsAmount= new JLabel[8];
 
         displayPanel.setBounds(120,10,300,300);
-        displayPanel.setBackground(Color.RED);
+        //displayPanel.setBackground(Color.RED);
         displayPanel.setLayout(new GridLayout(8,3));
 
         bSleep=new JButton("Idź spać");
@@ -52,11 +52,8 @@ public class Home extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==bSleep){
-            System.out.println("Karinka"+ GameFrame.karinka.getEnergy());
-            GameFrame.karinka.setEnergy(100);
-            System.out.println("Karinka"+ GameFrame.karinka.getEnergy());
-
-            Character.energyBar.setValue(GameFrame.karinka.getEnergy());
+            GameFrame.character.setEnergy(100);
+            Character.energyBar.setValue(GameFrame.character.getEnergy());
         }
 
         if (e.getSource()==bEat){
@@ -72,7 +69,6 @@ public class Home extends JFrame implements ActionListener {
                 Shop.buysProducts[i]-=1;
                 productsAmount[i].setText(String.valueOf(Shop.buysProducts[i]));
                 Character.hungry+=GameFrame.products.get(i).energyRegen;
-                System.out.println(Character.hungry);
                 if (Character.hungry>100) Character.hungry=100;
                 Character.hungryBar.setValue(Character.hungry);
                 if(Shop.buysProducts[i] == 0) bEatThis[i].setEnabled(false);

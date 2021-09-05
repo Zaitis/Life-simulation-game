@@ -39,14 +39,14 @@ public class Office extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==bJob){
-            if(GameFrame.karinka.getEnergy()>=10) {
+            if(GameFrame.character.getEnergy()>=10) {
                 if (Character.hungry >= 8) {
                     Character.hungry -= 8;
                     Character.hungryBar.setValue(Character.hungry);
-                    GameFrame.karinka.setEnergy(GameFrame.karinka.getEnergy()-10);
+                    GameFrame.character.setEnergy(GameFrame.character.getEnergy()-10);
                     Character.money += Character.knowledge;
                     Character.lMoney.setText("Pieniądze: " + Character.money);
-                    Character.energyBar.setValue(GameFrame.karinka.getEnergy());
+                    Character.energyBar.setValue(GameFrame.character.getEnergy());
 
                     } else {
                     JOptionPane.showMessageDialog(
