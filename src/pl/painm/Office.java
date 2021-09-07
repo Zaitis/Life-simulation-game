@@ -20,15 +20,15 @@ public class Office extends JFrame implements ActionListener {
         this.setVisible(true);
 
         bJob=new JButton("Pracuj");
-        bJob.setBounds(10,10,100,30);
+        bJob.setBounds(10,10,150,30);
         bJob.addActionListener(this);
 
         bPromotion=new JButton("Poproś o Awans");
-        bPromotion.setBounds(10,50,100,30);
+        bPromotion.setBounds(10,50,150,30);
         bPromotion.addActionListener(this);
 
         bExit=new JButton("Wyjdź");
-        bExit.setBounds(10,90,100,30);
+        bExit.setBounds(10,90,150,30);
         bExit.addActionListener(this);
 
         this.add(bJob);

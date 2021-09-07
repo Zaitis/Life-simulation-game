@@ -10,7 +10,7 @@ public class GameFrame extends JFrame {
             private final int FRAME_HEIGHT=800;
             static Map<Integer, ShopProducts> products;
             static ImgPanel imgpanel;
-            static Character character =new Character("Marian",100,100,5,5,1000,100);
+            static Character character =new Character(NewGameFrame.name,100,100,5,5,1000,100);
 
     GameFrame(){
 
